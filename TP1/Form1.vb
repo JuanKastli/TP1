@@ -9,12 +9,10 @@
         If e.KeyChar = "/" And pos <> 2 And pos <> 5 Then
             e.Handled = False
         End If
-
         If Char.IsNumber(e.KeyChar) And (pos = 2 Or pos = 5) Then
             e.Handled = True
             Exit Sub
         End If
-
         If e.KeyChar = "." Then
             SendKeys.Send("/")
             e.Handled = True
